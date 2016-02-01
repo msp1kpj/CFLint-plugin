@@ -56,12 +56,6 @@ public class LintParser extends AbstractAnnotationParser {
 	public Collection<FileAnnotation> parse(final InputStream file, final String moduleName)
 			throws InvocationTargetException {
 		try {
-			FileOutputStream f = new FileOutputStream("c:\\temp\\xxx.txt",true);
-			f.write("read file".getBytes());
-			f.write(moduleName.getBytes());
-			f.write("\r\n".getBytes());
-			f.flush();
-			f.close();
 			final Digester digester = new Digester();
 			digester.setValidating(false);
 			digester.setClassLoader(LintParser.class.getClassLoader());
